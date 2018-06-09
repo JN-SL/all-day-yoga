@@ -1,0 +1,39 @@
+@import "./global-variables";
+
+$duration: 35s;
+
+.airplane-component {
+    position: absolute;
+    top: 8%;
+    right: 0;
+    transform: translateX(100%);
+    width: 500px;
+    
+    animation: flyThrough $duration linear infinite;
+    
+    .airplane {
+        width: 100%;
+    }
+    
+    .message {
+        position: absolute;
+        top: 18px;
+        right: 76px;
+        
+        font-family: Pacifico, cursive;
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+}
+
+@keyframes flyThrough {
+    0% {
+        transform: translateX(100%);
+    }
+    14% {
+        transform: translateX(-155%);
+    }
+    100% {
+        transform: translateX(-155%);
+    }
+}
